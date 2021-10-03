@@ -13,7 +13,7 @@ def canUnlockAll(boxes):
     try:
         for i in range(length -1):
             for j in range(len(boxes[new[i]])):
-                new.append(boxes[new[i][j]])
+                new.append(boxes[new[i]][j])
     except:
         return(False)
     new = sorted(new)
