@@ -16,6 +16,7 @@ def canUnlockAll(boxes):
                 new.append(boxes[new[i][j]])
     except:
         return(False)
+    new = sorted(new)
     for i in new:
         if i not in no:
             no.append(i)
