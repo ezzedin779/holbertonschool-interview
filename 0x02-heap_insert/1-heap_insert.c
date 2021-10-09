@@ -22,7 +22,7 @@ size_t _depth(const heap_t *tree)
 /**
  * _is_leaf - are u the last ?
  * @n: the node to check
- * Return: 0 or 1 
+ * Return: 0 or 1
  */
 int _is_leaf(const heap_t *n)
 {
@@ -36,12 +36,12 @@ int _is_leaf(const heap_t *n)
 /**
  * _height - how long ? ?
  * @tree: the tree to check
- * Return: the height 
+ * Return: the height
  */
 size_t _height(const heap_t *tree)
 {
 	size_t left, right;
-		
+
 	if (tree == NULL || _is_leaf(tree))
 		return (0);
 	left = _height(tree->left);
@@ -52,7 +52,7 @@ size_t _height(const heap_t *tree)
 }
 
 /**
- * _insert - insert it 
+ * _insert - insert it
  * @tree: the tree to insert in
  * @l: how deep ?
  * @value: the value to insert
