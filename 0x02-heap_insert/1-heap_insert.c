@@ -103,7 +103,7 @@ heap_t *heap_insert(heap_t **root, int value)
         if (n != NULL)
             break;
     }
-    while (n->parent != NUL && n->n > n->parent->n)
+    while (n->parent != NULL && n->n > n->parent->n)
     {
         tmp = n->parent->n;
         n->parent->n = n->n;
