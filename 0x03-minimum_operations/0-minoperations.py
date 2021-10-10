@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Minimum Operations"""
 
+
 def minOperations(n):
 	"""Calculate please ?"""
 	result = 0
