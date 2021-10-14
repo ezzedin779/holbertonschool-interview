@@ -14,7 +14,7 @@ int is_palindrome(unsigned long n)
 		x = r % 10 + x * 10;
 		r = r / 10;
 	}
-	if (y == n)
+	if (x == n)
 		return (1);
 	return (0);
 }
