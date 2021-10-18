@@ -4,30 +4,39 @@
 if __name__ == '__main__':
     import sys
 
-    i = 0
-    stc = ['200', '301', '400', '401', '403', '404', '405', '500']
-    l = 0
-    n = [0, 0, 0, 0, 0, 0, 0, 0]
+    def _print(stc, fs):
+        """printing the needed information"""
+        print("File size: {}".format(fs))
+        for st, t in sorted(stc.items()):
+            if t:
+                print("{}: {}".format(st, t))
+
+    stc = {"200": 0,
+           "301": 0,
+           "400": 0,
+           "401": 0,
+           "403": 0,
+           "404": 0,
+           "405": 0,
+           "500": 0,
+           }
+    fs = 0
+    li = 0
 
     try:
         for line in sys.stdin:
-            piece = line.split()
-            if len(piece) > 2:
-                if piece[-2] in stc:
-                    j = stc.index(piece[-2])
-                    n[j] = n[j] + 1
-                i += 1
-                l = l + int(piece[-1])
-            if i == 10:
-                i = 0
-                print("File size: {}".format(l))
-                for j in range(8):
-                    if n[j] != 0:
-                        print("{}: {}".format(stc[j], n[j]))
-    except Exception:
-        pass
-    finally:
-        print("File size: {}".format(l))
-        for j in range(8):
-            if n[j] != 0:
-                print("{}: {}".format(stc[j], n[j]))
+            if li != 0 and li % 10 == 0:
+                _print(stc, fs)
+            li += 1
+            info = line.split()
+            try:
+                st = info[-2]
+                if st in stc:
+                    stc[st] += 1
+                fs += int(info[-1])
+            except Exception:
+                pass
+        _print(stc, fs)
+    except KeyboardInterrupt:
+        _print(stc, fs)
+        raise
