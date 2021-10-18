@@ -8,6 +8,7 @@
 static void _print(int grid[3][3])
 {
 	int i, j;
+
 	for (i = 0; i < 3; i++)
 	{
 		for (j = 0; j < 3; j++)
@@ -28,6 +29,7 @@ static void _print(int grid[3][3])
 void _copy(int grid[3][3], int copied[3][3])
 {
 	int i, j;
+
 	for (i = 0; i < 3; i++)
 		for(j = 0; j < 3; j++)
 			copied[i][j] = grid[i][j];
@@ -41,6 +43,7 @@ void _copy(int grid[3][3], int copied[3][3])
 void quick_add(int grid[3][3], int grid0[3][3])
 {
 	int i, j;
+
 	for (i = 0; i < 3; i++)
 		for (j = 0; j < 3; j++)
 			grid[i][j] = grid[i][j] + grid0[i][j];
