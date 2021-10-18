@@ -7,7 +7,7 @@ def validUTF8(data):
     n = 0
     for i in data:
         c = format(i, '#010b')[-8:]
-        if n ==0:
+        if n == 0:
             for b in c:
                 if b == '0':
                     break
