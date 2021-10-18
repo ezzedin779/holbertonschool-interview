@@ -13,13 +13,13 @@ try:
         piece = line.split()
         if len(piece) > 2:
             if piece[-2] in stc:
-                x = stc.index(piece[-2])
-                n[x] = n[x] + 1
+                j = stc.index(piece[-2])
+                n[j] = n[j] + 1
             i += 1
             l = l + int(piece[-1])
         if i == 10:
             i = 0
-            print("File Size: {}".format(l))
+            print("File size: {}".format(l))
             for j in range(8):
                 if n[j] != 0:
                     print("{}: {}".format(stc[j], n[j]))
