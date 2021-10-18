@@ -30,10 +30,9 @@ int is_palindrome(listint_t **head)
 	int *new = malloc((len / 2) * sizeof(int));
 	int i, count = 0;
 
-	if (!head)
-		return (0);
-	if (!(*head))
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
+	
 	for (count = 0; count != len / 2; count++)
 	{
 		new[count] = h->n;
