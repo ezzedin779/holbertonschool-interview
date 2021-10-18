@@ -13,7 +13,7 @@ static void _print(int grid[3][3])
 		for (j = 0; j < 3; j++)
 		{
 			if (j)
-				print(" ");
+				printf(" ");
 			printf("%d", grid[i][j]);
 		}
 		printf("\n");
