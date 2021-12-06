@@ -12,6 +12,7 @@ def insert(n):
         board.append(r)
     return(board)
 
+
 def displayboard(board, n):
     x = []
     for i in range(n):
@@ -22,6 +23,7 @@ def displayboard(board, n):
                 y.append(j)
                 x.append(y)
     print(x)
+
 
 def sf(board, r, c, n):
     for i in range(c):
@@ -37,10 +39,12 @@ def sf(board, r, c, n):
         j -= 1
     return True
 
+
 def nqb(board, c, n):
     if (c == n):
         displayboard(board, n)
         return True
+
 
     res = False
     for i in range (n):
@@ -50,8 +54,9 @@ def nqb(board, c, n):
             res = nqb(board, c + 1, n) or res
 
             board[i][c] = 0
-            
+
     return res
+
 
 def nq(board, n):
     if (nqb(board, 0, n) is False):
