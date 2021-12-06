@@ -45,9 +45,8 @@ def nqb(board, c, n):
         displayboard(board, n)
         return True
 
-
     res = False
-    for i in range (n):
+    for i in range(n):
         if (sf(board, i, c, n)):
             board[i][c] = 1
 
@@ -61,7 +60,7 @@ def nqb(board, c, n):
 def nq(board, n):
     if (nqb(board, 0, n) is False):
         print("Solution does not exist")
-        exit (1)
+        exit(1)
 
 
 if __name__ == "__main__":
