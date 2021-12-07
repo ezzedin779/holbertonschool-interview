@@ -53,4 +53,5 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 	s->parent = NULL;
 	s->right = crnode(array, s, mid + 1, l);
 	s->left = crnode(array, s, fir, mid - 1);
+	return(s);
 }
