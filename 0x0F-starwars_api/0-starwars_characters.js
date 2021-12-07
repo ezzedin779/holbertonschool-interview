@@ -1,9 +1,9 @@
 #!/usr/bin/node
-const req = require('request');
-const proc = require('process');
-const id = proc.argv[2];
+const request = require('request');
+const process = require('process');
+const id = process.argv[2];
 const url = 'https://swapi-api.hbtn.io/api/films/' + id;
-req({url: url}, (err1, res, body) => {
+request({url: url}, (err1, res, body) => {
 	const n = [];
 	const js = JSON.parse(body);
 	js.characters.forEach(urls => {
