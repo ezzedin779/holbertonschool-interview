@@ -39,7 +39,7 @@ avl_t *crnode(int *arr, avl_t *h, int fir, int l)
 avl_t *sorted_array_to_avl(int *array, size_t size)
 {
 	avl_t *s;
-	int fir, mid, l:
+	int fir, mid, l;
 
 	if (!array)
 		return(NULL);
