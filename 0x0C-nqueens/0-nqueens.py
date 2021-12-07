@@ -32,6 +32,14 @@ def sf(board, r, c, n):
 
     i = r
     j = c
+    while j >= 0 and i >= 0:
+        if (board[i][j]):
+            return False
+        i -= 1
+        j -= 1
+
+    i = r
+    j = c
     while j >= 0 and i < n:
         if (board[i][j]):
             return False
