@@ -6,12 +6,12 @@ request({ url: (`https://swapi-api.hbtn.io/api/films/${Id}/`), json: true }, fun
 	if (e) {
 		return console.log(e);
 	}
-	for (const k of json.characters) {
-		request({ url: k, json: true }, function (err, res, json) {
-		if (err) {
-			return console.log(err);
+	for (const i of json.characters) {
+		request({ url: i, json: true }, function (err, res, json) {
+			if (err) {
+				return console.log(err);
 			}
-			const id = k.split('/')[5];
+			const id = i.split('/')[5];
 			characters[id] = json.name;
 		}, 2000);
 	}
