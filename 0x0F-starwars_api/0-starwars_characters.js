@@ -4,19 +4,19 @@ const process = require('process');
 const id = process.argv[2];
 const url = 'https://swapi-api.hbtn.io/api/films/' + id;
 request({ url: url }, (err1, res, body) => {
-	const n = [];
-	const js = JSON.parse(body);
-	js.characters.forEach(urls => {
+	const nid = [];
+	const bjs = JSON.parse(body);
+	bjs.characters.forEach(urls => {
 		const id = urls.split('/')[5];
 		request({ url: urls }, (err2, res, body) => {
-			const js1 = JSON.parse(body);
-			n[id] = js1.name;
+			const bjs1 = JSON.parse(body);
+			nid[id] = bjs1.name;
 		});
 	});
 	setTimeout(function (){
-		js.characters.forEach(element => {
+		bjs.characters.forEach(element => {
 			const id = element.split('/')[5];
-			console.log(n[id]);
+			console.log(nid[id]);
 		});
 	}, 1000);
 });
