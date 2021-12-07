@@ -13,7 +13,7 @@ request({ url: url }, (err1, res, body) => {
 			nid[id] = bjs1.name;
 		});
 	});
-	setTimeout(function (){
+	setTimeout(function () {
 		bjs.characters.forEach(element => {
 			const id = element.split('/')[5];
 			console.log(nid[id]);
