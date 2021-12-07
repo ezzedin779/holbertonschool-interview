@@ -8,7 +8,7 @@
  * @l: last element
  * Return: new list left/right
  */
-avl_t *crnode(int arr, avl_t *h, int fir, int l)
+avl_t *crnode(int *arr, avl_t *h, int fir, int l)
 {
 	int mid;
 	avl_t *n;
