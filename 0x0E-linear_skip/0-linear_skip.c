@@ -1,9 +1,9 @@
 #include "search.h"
 
 /**
- * l_s - give me access
- * @l: the list
- * @val: searched for
+ * linear_skip - give me access
+ * @list: the list
+ * @value: searched for
  * Return: the list
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
@@ -31,8 +31,9 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		if (!list->express)
 		{
 			for (; he->next; he = he->next)
-		{}
-		printf("Value found between indexes [%lu] and [%lu]\n", list->index, he->index);
+			{}
+		printf("Value found between indexes [%lu] and [%lu]\n",
+					list->index, he->index);
 		for (; list; list = list->next)
 		{
 			printf("Value checked at index [%lu] = [%d]\n", list->index, list->n);
