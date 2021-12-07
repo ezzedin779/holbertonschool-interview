@@ -13,20 +13,20 @@ avl_t *crnode(int *arr, avl_t *h, int fir, int l)
 	int mid;
 	avl_t *n;
 
-	if (fir >l)
-		return(NULL);
+	if (fir > l)
+		return (NULL);
 
 	mid = (fir + l) / 2;
 	n = malloc(sizeof(avl_t));
 
 	if (!n)
-		return(NULL);
+		return (NULL);
 
 	n->n = arr[mid];
 	n->parent = h;
 	n->right = crnode(arr, n, mid + 1, l);
 	n->left = crnode(arr, n, fir, mid - 1);
-	return(n);
+	return (n);
 }
 
 
@@ -42,10 +42,10 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 	int fir, mid, l;
 
 	if (!array)
-		return(NULL);
+		return (NULL);
 	s = malloc(sizeof(avl_t));
 	if (!s)
-		return(NULL);
+		return (NULL);
 	fir = 0;
 	l = size - 1;
 	mid = (fir + l) / 2;
@@ -53,5 +53,5 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 	s->parent = NULL;
 	s->right = crnode(array, s, mid + 1, l);
 	s->left = crnode(array, s, fir, mid - 1);
-	return(s);
+	return (s);
 }
