@@ -41,7 +41,7 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 	avl_t *s;
 	int fir, mid, l:
 
-	if (!arr)
+	if (!array)
 		return(NULL);
 	s = malloc(sizeof(avl_t));
 	if (!s)
@@ -51,6 +51,6 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 	mid = (fir + l) / 2;
 	s->n = array[mid];
 	s->parent = NULL;
-	s->right = crnode(arr, s, mid + 1, l);
-	s->left = crnode(arr, s, fir, mid - 1);
+	s->right = crnode(array, s, mid + 1, l);
+	s->left = crnode(array, s, fir, mid - 1);
 }
