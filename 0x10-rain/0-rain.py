@@ -23,7 +23,7 @@ def rain(walls):
                 l = walls[j]
         for k in range(i + 1, len(walls)):
             if (walls[k] > r):
-                r = walls[r]
+                r = walls[k]
         x = light(l, r) - walls[i]
         res += x
     return(res)
