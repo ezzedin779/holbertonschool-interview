@@ -41,6 +41,8 @@ int search(int *arr, size_t f, size_t l, int s)
 		return (arr, q + 1, l, s);
 	return (-1);
 }
+
+
 /**
  * advanced_binary - advanced my search
  * @array: the array to be searched
