@@ -37,8 +37,8 @@ int search(int *arr, size_t f, size_t l, int s)
 		return (f);
 	if (s <= arr[q - 1])
 		return (search(arr, f, q, s));
-	if (s > = arr[q + 1])
-		return (arr, q + 1, l, s);
+	if (s >= arr[q + 1])
+		return (search(arr, q + 1, l, s));
 	return (-1);
 }
 
