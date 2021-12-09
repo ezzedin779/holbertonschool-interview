@@ -1,5 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
+const process = require('process');
 const Id = process.argv[2];
 const characters = [];
 request({ url: (`https://swapi-api.hbtn.io/api/films/${Id}/`), json: true }, function (e, res, json) {
