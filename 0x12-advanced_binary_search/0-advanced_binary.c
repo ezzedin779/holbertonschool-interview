@@ -48,6 +48,7 @@ int search(int *arr, size_t f, size_t l, int s)
  * @array: the array to be searched
  * @size: size of the array
  * @value: the value to be searched
+ * Return: the exact location
  */
 int advanced_binary(int *array, size_t size, int value)
 {
