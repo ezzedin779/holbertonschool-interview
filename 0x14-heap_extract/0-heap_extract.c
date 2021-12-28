@@ -65,7 +65,7 @@ void fix(heap_t **first)
 	{
 		if (tobe->right && tobe->left)
 			tobe = tobe->left->n > tobe->right->n ? tobe->left : tobe->right;
-		if (tobe->right && tobet->right->n > tobe->n)
+		if (tobe->right && tobe->right->n > tobe->n)
 			tobe = tobe->right;
 		else if (tobe->left && tobe->left->n > tobe->n)
 			tobe = tobe->left;
