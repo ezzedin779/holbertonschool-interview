@@ -37,7 +37,7 @@ heap_t *lf(heap_t *root)
 
 	if (lgth(root->left) > lgth(root->right))
 		return (lf(root->left));
-	return (leaf(root->right));
+	return (lf(root->right));
 }
 
 /**
