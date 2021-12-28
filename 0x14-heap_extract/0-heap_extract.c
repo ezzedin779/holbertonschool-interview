@@ -99,12 +99,12 @@ int heap_extract(heap_t **root)
 	tp = (*root);
 	if (tp->left)
 	{
-		tp->left->parent = 1;
+		tp->left->parent = lol;
 		lol->left = tp->left;
 	}
 	if (tp->right)
 	{
-		tp->right->parent = 1;
+		tp->right->parent = lol;
 		lol->right = tp->right;
 	}
 	if (lol->parent->left && lol->parent->left == lol)
