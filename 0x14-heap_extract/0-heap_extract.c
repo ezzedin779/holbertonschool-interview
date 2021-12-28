@@ -71,7 +71,7 @@ void fix(heap_t **first)
 			tobe = tobe->left;
 
 		swap(tobe->parent, tobe);
-	}	
+	}
 }
 
 /**
