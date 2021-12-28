@@ -2,7 +2,7 @@
 
 
 /**
- * Lgth - how long is the tree ?
+ * lgth - how long is the tree ?
  * @root: the root
  * Return: the length of the tree
  */
@@ -69,7 +69,7 @@ void fix(heap_t **first)
 			tobe = tobe->right;
 		else if (tobe->left && tobe->left->n > tobe->n)
 			tobe = tobe->left;
-		
+
 		swap(tobe->parent, tobe);
 	}	
 }
@@ -84,7 +84,7 @@ int heap_extract(heap_t **root)
 	heap_t *lol, *tp;
 	int value;
 
-	if((*root) == NULL)
+	if ((*root) == NULL)
 		return (0);
 
 	value = (*root)->n;
