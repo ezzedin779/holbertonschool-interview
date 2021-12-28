@@ -8,6 +8,7 @@
 int length(char *str)
 {
 	int res = 0;
+
 	for (; str[res] != '\0'; res++)
 	;
 
@@ -68,7 +69,7 @@ int main(int argc, char **argv)
 {
 	int *x = NULL, *y = NULL, *prod = NULL, len_1, len_2;
 	int new, carr;
-	int i, j;
+	int i, j, k;
 	int b_i = 0, b_j;
 
 	if (argc != 3)
@@ -95,11 +96,11 @@ int main(int argc, char **argv)
 			prod[b_i + b_j] += carr;
 		b_i++;
 	}
-	for (i = len_1 + len_2 - 1; i >= 0; i--)
+	for (k = len_1 + len_2 - 1; k >= 0; i--)
 	{
-		if (i == len_1 + len_2 - 1 && prod[i] == 0)
+		if (k == len_1 + len_2 - 1 && prod[k] == 0)
 			continue;
-		_putchar(prod[i] + '0');
+		_putchar(prod[k] + '0');
 	}
 	_putchar('\n');
 	free(x);
