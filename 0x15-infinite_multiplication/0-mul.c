@@ -96,7 +96,7 @@ int main(int argc, char **argv)
 			prod[b_i + b_j] += carr;
 		b_i++;
 	}
-	for (k = len_1 + len_2 - 1; k >= 0; i--)
+	for (k = len_1 + len_2 - 1; k >= 0; k--)
 	{
 		if (k == len_1 + len_2 - 1 && prod[k] == 0)
 			continue;
