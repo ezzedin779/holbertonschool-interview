@@ -43,17 +43,17 @@ void top_split(int *narr, int fir, int la, int *arr)
 	int mid;
 	int i = 0;
 
-	if (last - first <= 1)
+	if (la - fir <= 1)
 		return;
 	
-	mid = (last + first) / 2;
+	mid = (la + fir) / 2;
 
 	top_split(arr, fir, mid, narr);
 	top_split(arr, mid, la, narr);
 
 	printf("Merging...\n");
 	printf("[left]: ");
-	
+
 	for (i = fir; i < mid; i++)
 	{
 		printf("%d", narr[i]);
@@ -61,6 +61,12 @@ void top_split(int *narr, int fir, int la, int *arr)
 			printf(", ");
 	}
 	printf("\n[right]: ");
+	for (i = mid; i < la; i++)
+	{
+		printf("%d", narr[i]);
+		if (i < la - 1)
+			printf(", ");
+	}
 
 	top_merge(arr, fir, mid, la, narr);
 
