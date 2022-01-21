@@ -45,7 +45,7 @@ void top_split(int *narr, int fir, int la, int *arr)
 
 	if (la - fir <= 1)
 		return;
-	
+
 	mid = (la + fir) / 2;
 
 	top_split(arr, fir, mid, narr);
@@ -108,7 +108,7 @@ void merge_sort(int *array, size_t size)
 
 	if (array == NULL)
 		return;
-	
+
 	narr = malloc(sizeof(int) * size);
 
 	top_sort(array, narr, size);
