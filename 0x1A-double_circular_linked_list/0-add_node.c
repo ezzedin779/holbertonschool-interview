@@ -9,6 +9,7 @@
 List *add_node_end(List **list, char *str)
 {
 	List *n = NULL;
+
 	n = malloc(sizeof(List));
 	if (!n)
 		return (NULL);
@@ -45,6 +46,7 @@ List *add_node_end(List **list, char *str)
 List *add_node_begin(List **list, char *str)
 {
 	List *n = NULL;
+
 	n = malloc(sizeof(List));
 	if (!n)
 		return (NULL);
@@ -64,7 +66,7 @@ List *add_node_begin(List **list, char *str)
 	}
 	else
 	{
-		n->next =(*list);
+		n->next = (*list);
 		n->prev = (*list)->prev;
 		(*list)->prev->next = n;
 		(*list)->prev = n;
