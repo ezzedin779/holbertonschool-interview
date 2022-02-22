@@ -63,7 +63,7 @@ void radix_sort(int *array, size_t size)
 		for (i = 0, count = 0; i <= 9; i++)
 			for (b = 0; b < sort[i] && places[i][0] != -1; b++, count++)
 				array[count] = places[i][b];
-		for (i = 0; i <=9; i++)
+		for (i = 0; i <= 9; i++)
 			free(places[i]);
 		print_array(array, size);
 	}
