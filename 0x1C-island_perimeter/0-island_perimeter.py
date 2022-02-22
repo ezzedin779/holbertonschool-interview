@@ -8,7 +8,7 @@ def island_perimeter(grid):
     """ Calculate ?"""
     x = 0
     sizex = len(grid)
-    if sizex == 0 or size > 100:
+    if sizex == 0 or sizex > 100:
         return 0
     sizey = len(grid[0])
     for i in range(sizex):
@@ -22,7 +22,7 @@ def island_perimeter(grid):
                 except:
                     x += 1
                 try:
-                    if (grix[i + 1][j] == 0):
+                    if (grid[i + 1][j] == 0):
                         x += 1
                 except:
                     x += 1
