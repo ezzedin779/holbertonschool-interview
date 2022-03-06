@@ -16,6 +16,7 @@ int bst_h(const binary_tree_t *tree, int min, int max)
 	return (bst_h(tree->left, min, tree->n - 1) &&
 			bst_h(tree->right, tree->n, tree->n + 1, max));
 }
+
 /**
  * bst - minimising my bst_h
  * @tree: the tree to check ?
@@ -25,6 +26,7 @@ int bst(const binary_tree_t *tree)
 {
 	return (bst_h(tree, INT_MIN, INT_MAX));
 }
+
 /**
  * Max - calculating the maximum
  * @x: the variable to check ? 
@@ -35,6 +37,7 @@ int Max(int x, int y)
 {
 	return ((x >= y) ? x : y);
 }
+
 /**
  * height - the height of the tree ?
  * @tree: the tree to check
@@ -46,6 +49,7 @@ int height(const binary_tree_t *tree)
 		return (0);
 	return (1 + Max(height(tree->left), height(tree->right)));
 }
+
 /**
  * binary_tree_is_avl - checking if it's avl or not ?
  * @tree: tree to check
