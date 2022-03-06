@@ -1,30 +1,20 @@
 #include "binary_trees.h"
 
 /**
- * bst_h - Maximum side
+ * bst - Maximum side
  * @tree: tree to check
  * @min: minimum ?
  * @max: Maximum
  * Return: An integer ?
  */
-int bst_h(const binary_tree_t *tree, int min, int max)
+int bst(const binary_tree_t *tree, int min, int max)
 {
-	if (!tree)
-		return(1);
+	if (tree == NULL)
+		return (1);
 	if (tree->n < min || tree->n > max)
 		return (0);
-	return (bst_h(tree->left, min, tree->n - 1) &&
-			bst_h(tree->right, tree->n, tree->n + 1, max));
-}
-
-/**
- * bst - minimising my bst_h
- * @tree: the tree to check ?
- * Return: the integer needed ?
- */
-int bst(const binary_tree_t *tree)
-{
-	return (bst_h(tree, INT_MIN, INT_MAX));
+	return (bst(tree->left, min, tree->n - 1) &&
+				bst(tree->right, tree->n + 1, max));
 }
 
 /**
@@ -61,16 +51,19 @@ int binary_tree_is_avl(const binary_tree_t *tree)
 	int rh;
 
 	if (tree == NULL)
-		return (1);
-	if (!bst(tree))
 		return (0);
-	if (bst(tree))
-	{
-		lh = height(tree->left);
-		rh = height (tree->right);
-		if (abs(lh - rh) <= 1 && binary_tree_is_avl(tree->left) &&
-				binary_tree_is_avl(tree->right))
-			return (1);
-	}
-	return (0);
+
+	if (!bst(tree, INT_MIN, INT_MAX))
+		return (0);
+
+	lh = hieght(tree->left);
+	rh = height(tree->right);
+
+	if (abs(rh - lh) > 1)
+		return (0);
+
+	if (!(tree->left) || !(tree->right))
+		return (1);
+	else
+		return (binary_tree_is_avl(tree->left) && binary_tree_is_avl(tree->right));
 }
