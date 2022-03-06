@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <limits.h>
 
 /**
@@ -32,5 +31,6 @@ int Max(int x, int y);
 int height(const binary_tree_t *tree);
 int binary_tree_is_avl(const binary_tree_t *tree);
 void binary_tree_print(const binary_tree_t *);
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 
 #endif
