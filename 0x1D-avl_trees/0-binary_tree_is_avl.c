@@ -19,7 +19,7 @@ int bst(const binary_tree_t *tree, int min, int max)
 
 /**
  * Max - calculating the maximum
- * @x: the variable to check ? 
+ * @x: the variable to check ?
  * @y: the variable to check ?
  * Return: the biggest ?
  */
