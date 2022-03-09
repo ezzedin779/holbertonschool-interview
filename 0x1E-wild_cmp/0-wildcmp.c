@@ -2,7 +2,7 @@
 
 /**
  * wildcmp - compare ?
- * @s1: first string to compare 
+ * @s1: first string to compare
  * @s2: second string
  * Return: true or false
  */
