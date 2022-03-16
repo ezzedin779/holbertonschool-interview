@@ -1,4 +1,4 @@
-#!/usr/bin/pjthon3
+#!/usr/bin/python3
 """
 Creating Pascal's triangle
 """
