@@ -17,15 +17,25 @@ int regex_match(char const *str, char const *pattern)
 	if (*(pattern + 1) == '*')
 	{
 		if (*(pattern) == '.')
+		{
 			return (regex_match(str, pattern + 2) || regex_match(str + 1, pattern));
+		}
 		if (*(pattern) != *str)
+		{
 			return (regex_match(str, pattern + 2));
+		}
 		if (*(pattern) == *str && *(str + 1) == *str)
+		{
 			return (regex_match(str + 1, pattern));
+		}
 		if (*(str + 1) != *str)
+		{
 			return (regex_match(str + 1, pattern + 2));
+		}
 	}
 	if (*pattern == *str || *pattern == '.')
+	{
 		return (regex_match(str + 1, pattern + 1));
+	}
 	return (0);
 }
