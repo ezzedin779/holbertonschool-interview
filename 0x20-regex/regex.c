@@ -26,6 +26,6 @@ int regex_match(char const *str, char const *pattern)
 			return (regex_match(str + 1, pattern + 2));
 	}
 	if (*pattern == *str || *pattern == '.')
-		return regex_match(str + 1, pattern + 1);
+		return (regex_match(str + 1, pattern + 1));
 	return (0);
 }
