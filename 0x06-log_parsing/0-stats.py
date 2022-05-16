@@ -26,7 +26,7 @@ try:
         i = i + 1
         if (i == 10):
             print("File size: {:d}".format(size))
-            for k, v in sorted:
+            for k, v in _sorted:
                 print("{:d}: {:d}".format(k, v))
             i = 0
 except Exception:
@@ -34,5 +34,5 @@ except Exception:
 
 finally:
     print("File size: {:d}".format(size))
-    for k, v in sorted:
+    for k, v in _sorted:
         print("{:d}: {:d}".format(k, v))
